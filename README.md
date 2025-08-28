@@ -59,19 +59,13 @@ python main.py
 Before patch (validation): {'keyword_accuracy': 0.075, 'rougeL_templ_vs_human': 0.14}
 After patch (validation): {'keyword_accuracy': 0.178, 'rougeL_templ_vs_human': 0.122}
 
-Best improved example:
+Best improved example
 
 - ROUGE-L before: 0.049
 - ROUGE-L after: 0.100
-- correct_cat: STATUS_RETURN | pred before → after: HOW_TO_RETURN → STATUS_SHIPPING
 ...
 
-This shows:
-Keyword accuracy improved (better classification).
-ROUGE-L changed slightly (different similarity between template and human reply).
-The patch automatically updated the knowledge tree with new keywords/instructions.
-
-###This proof of concept shows that
+### This proof of concept shows that
 It's possible to automate the process of evaluating and optimizing the json file
 from the emails using the human replies as reference. 
 This makes knowledge tree maintenance scalable and reproducible even though this particular solution is only a poc and would not work great in practice :D
