@@ -82,9 +82,9 @@ def main():
         print("\nWarning: empty train/val split. Adjust --val_cutoff.")
         return
 
-    # Baseline evaluation before patch
+    # Before patch evaluation
     base_metrics, base_rows = evaluate(val_df, ktree)
-    print("\nBaseline (validation):", {k: round(v,3) for k,v in base_metrics.items()})
+    print("\nBefore patch (validation):", {k: round(v,3) for k,v in base_metrics.items()})
 
     # Generate patch (keywords + instruction hints)
     patch_ops = []
@@ -142,7 +142,7 @@ def main():
         f.write(f"- added keywords: {added_keywords if added_keywords else '[]'}\n")
         f.write(f"- instruction changed: {instr_changed}\n\n")
 
-        f.write("Baseline metrics:\n")
+        f.write("Before patch metrics:\n")
         f.write(f"- keyword_accuracy: {base_metrics['keyword_accuracy']:.3f}\n")
         f.write(f"- rougeL_templ_vs_human: {base_metrics['rougeL_templ_vs_human']:.3f}\n\n")
 
