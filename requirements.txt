@@ -1,6 +1,6 @@
-pandas
-numpy
-scikit-learn
-rouge-score
-jsonpatch
-jinja2
+pandas # Used to easily analyze the data from runs json file.
+numpy # Used for numerical operations
+scikit-learn # Used for machine learning tasks
+rouge-score # Used for evaluating text generation
+jsonpatch # Used for JSON document manipulation
+jinja2 # Used for templating
