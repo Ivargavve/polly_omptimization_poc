@@ -4,3 +4,5 @@ scikit-learn # Used for machine learning tasks
 rouge-score # Used for evaluating text generation
 jsonpatch # Used for JSON document manipulation
 jinja2 # Used for templating
+langdetect  # detect language of llm_reply and human_reply
+

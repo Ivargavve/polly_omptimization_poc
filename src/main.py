@@ -13,8 +13,9 @@ def main():
         print("\n--- Case ---")
         print("Category:", row["category"])
         print("Score (dataset):", round(row["score"],3), "ROUGE-L (our eval):", round(r,3))
-        print("LLM reply:", row['llm_reply'][:150], "...")
-        print("Human reply:", row['human_reply'][:150], "...")
+        print(f"Incoming email: {row['incoming_email'][:200].replace('\n', ' ')}...")
+        print("LLM reply:", row['llm_reply'][:200], "...")
+        print("Human reply:", row['human_reply'][:200], "...")
 
 if __name__ == "__main__":
     main()
