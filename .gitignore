@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# OS crap
+.DS_Store
+Thumbs.db
+
+# Byte-compiled / caches
+*.pyo
+*.pyd
+*.so
+*.dll
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Test/coverage
+.coverage
+*.coverage
+htmlcov/
+
+# Project-specific
+outputs/

@@ -1,0 +1,6 @@
+pandas
+numpy
+scikit-learn
+rouge-score
+jsonpatch
+jinja2
