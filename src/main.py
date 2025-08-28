@@ -12,7 +12,7 @@ def main():
         r = rougeL(row["llm_reply"], row["human_reply"])
         print("\n--- Case ---")
         print("Category:", row["category"])
-        print("Score (dataset):", round(row["score"],3), "ROUGE-L (our eval):", round(r,3))
+        print("Rouge-L (dataset):", round(row["score"],3), ", ROUGE-L (poc_eval):", round(r,3))
         print(f"Incoming email: {row['incoming_email'][:200].replace('\n', ' ')}...")
         print("LLM reply:", row['llm_reply'][:200], "...")
         print("Human reply:", row['human_reply'][:200], "...")
