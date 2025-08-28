@@ -1,0 +1,689 @@
+{
+  "COMPLAINT": {
+    "name": "COMPLAINT",
+    "description": "Use this category for emails that involve complaints about defective or damaged items, issues with product quality, or warranty claims. This includes items that are broken, damaged, or not functioning as intended upon receipt. Check also summary_of_conversation to see if this is a complaint. Shipping or return complaints and missing or wrong items do NOT belong to this category.",
+    "keywords": [
+      "Complaint",
+      "defective",
+      "warranty",
+      "poor quality",
+      "broken",
+      "damaged",
+      "claim",
+      "attached image"
+    ],
+    "examples": [
+      "Hej! Jag har köpt en jacka från er, fick hem den igår och har hunnit använda den under dagen. Dragkedjan var lite trög redan när jag provade jackan. Nu har dragkedjan gått sönder och går inte att dra upp. Har jag möjlighet att reklamera jackan och få en ny? Med vänliga hälsningar,",
+      "Hej! Jag köpte ett par skor i januari detta år och de har nyligen börjat att falla sönder helt o hållet. Både hål vid bägge sidor som leder till ett hål vid tårna, hål till sula vid häl och även att mockan faller av. Bifogar bilder nedan. OBS! Skador beror ej på skejtande.",
+      "Hej! Jag köpte ett par solglasögon på Nividas, gick till optikern och skulle sätta i slipade glas efter mitt recept. Nu har bågen spruckit, gäller garantin?",
+      "Hej, tack för ditt svar. Bifogar en bild på den defekta skon."
+    ],
+    "instruction": "Let customer know that the claim is accepted. Explain the next steps to the customer: Download the return label on Footway+ https://trackntrace.footwayplus.com/. Send back the product. Refund once the return received. The following is only applicable if the customer asks about a replacement: we can not send a replacement. Do not explain this if the customer didn't ask about replacement. Place a new order for a new product if customer wants to replace.",
+    "sub_categories": {
+      "PROOF_COMPLAINT": {
+        "name": "PROOF_COMPLAINT",
+        "description": "Use this subcategory for emails that have attachments or where the attachment or image is mentioned in the text and therefore have provided proof for their complaint about defective or damaged items, issues with product quality or warranty claims. Proof of the issue, defect or claim in general might come in form of an attached image or video.",
+        "keywords": [
+          "attached image",
+          "attached video",
+          "see photo",
+          "defective",
+          "broken",
+          "complaint",
+          "claim",
+          "warranty",
+          "defect",
+          "picture"
+        ],
+        "examples": [
+          "I bought a jacket from you, the zipper broke after two months of use as you can see on the photo attached.",
+          "The shoes I received from you in June already show defects on the seams. Attached an image for your reference.",
+          "My pants already faded drastically in color. Is this something I can claim with you or should I contact the manufacturer?",
+          "Hi, thank you for your reply. I have attached an image of the defective shoes."
+        ],
+        "instruction": "Let the customer know that the claim is accepted, unless user instructions say otherwise. Explain the next steps to the customer: Download the return label on Footway+ https://trackntrace.footwayplus.com/. Send back the product. Refund once the return is received. The following is only applicable if the customer asks about a replacement: we cannot send a replacement. Do not explain this if the customer didn't ask about replacement. Place a new order for a new product if customer wants to replace.",
+        "sub_categories": {}
+      },
+      "NO_PROOF": {
+        "name": "NO_PROOF",
+        "description": "Use this subcategory for initial complaint emails without any attachments that involve complaints about defective or damaged items, issues with product quality or warranty claims. These emails do not provide proof for the defect, issue or claim in general as there are no attachments but inform us initially about an issue with a product. The customer might inquire about how the complaint process is done without providing proof yet.",
+        "keywords": [
+          "complaint",
+          "defective",
+          "broken",
+          "poor quality",
+          "damaged",
+          "how to claim"
+        ],
+        "examples": [
+          "Hi, I bought a pair of jeans from you and the seams do already break. Can I get a replacement?",
+          "My shoes do not keep their form, this is not what I expected from shoes in this price range. Please advise how I can get compensation.",
+          "Hi, I have bought something from your website which I experience issues with. How do I go about for a warranty claim?",
+          "Hi I want to claim the pair of shoes I bought from you last year. The sole is falling off from one of the shoes, do you want me to send pictures?"
+        ],
+        "instruction": "Ask customer kindly to send a photo as support. If the complaint is about a squeaky noise or an item not being waterproof consider asking for a video instead. Afterwards we will be able to process your request and help you with your complaint.",
+        "sub_categories": {}
+      }
+    }
+  },
+  "RETURN": {
+    "name": "RETURN",
+    "description": "Use this category for emails inquiring about how to return an item for a different size or another product, or how to exchange an item that is not as described or mismatched sizes or was already dirty on arrival. This category also includes any inquiries about the status of a return or reporting issues with a return.",
+    "keywords": [
+      "Returns",
+      "exchange",
+      "size",
+      "wrong item",
+      "two left shoes",
+      "wrong size"
+    ],
+    "examples": [
+      "Hej, Hur returnerar jag en vara och byter ut till en mindre storlek, är det fri retur? Med vänlig hälsning, Lotta",
+      "Tyvärr visade sig att produkten vara för liten. Hur får jag mina pengar tillbaka? Jag behöver en ny returetikett.",
+      "Hej, jag ska skicka tillbaka en produkt, var registrerar jag min retur?",
+      "Hello I just wanted to ask if the return came back to you 1400408144",
+      "Have sent them back because they were not good in the sole!"
+    ],
+    "instruction": "Send back the wrong item for a refund. There is a return label included in the package, put the included return label on the outside of the parcel, if the customer does not have a return label, the customer can download https://trackntrace.footwayplus.com/.",
+    "sub_categories": {
+      "WRONG_PRODUCT": {
+        "name": "WRONG_PRODUCT",
+        "description": "Use this subcategory for emails reporting that the item received does not match the product specifications or description of what was actually ordered. This includes cases where the company has shipped an incorrect or different product, items that are already dirty or damaged upon arrival, mismatched shoe pairs (e.g., different sizes for left and right, or two left shoes), or any similar discrepancies. This category is not for situations where the customer made a mistake in their order and only applies on unused products placed within the last 365 days.",
+        "keywords": [
+          "received wrong product",
+          "shipped incorrect item",
+          "different from ordered",
+          "not as described",
+          "mismatch with order",
+          "stains already on shoes",
+          "two left shoes"
+        ],
+        "examples": [
+          "I ordered a pair of birkenstock arizona narrow in size 40 but it arrived a pair of eva regular in size 38 instead. How do you solve this?",
+          "My order SAM44356 is for a pair of Adizero Adios 5 but my package contains the Adios 4. I have an important race coming up and I need a replacement asap!",
+          "I was looking forward to get a new hiking backpack but I received a tennis racket. Is that a joke?",
+          "My shoes finally arrived but they came in two different sizes left and right. I want a solution and compensation for this inconvenience.",
+          "Hi. I ordered 37/38 but received 35/36. Can you help me with this?",
+          "I received my order yesterday, and was happy with both shoes and they are the right size. Unfortunately, one of the shoes was dirty on the top, and I want to exchange it for a new and clean pair of shoes. How do I go about it?"
+        ],
+        "instruction": "Handle return inquiries as follows:• Within 365 days: Send back the wrong item for a refund, place new order for the product with 10%-discount code (@@@compensation_discounts_code@label:prod@@@). We cannot re-send the correct item or offer a replacement. We cannot place the order for customer, customer needs to place new order themselves to get correct item. If return instructions are needed explain following: There is a return label included in the package, put the included return label on the outside of the parcel, if the customer does not have a return label, the customer can download https://trackntrace.footwayplus.com/\n\n• After 365 days: Inform the customer that the return period has expired and we unfortunately cannot accept a return or issue a refund.",
+        "sub_categories": {}
+      },
+      "HOW_TO_RETURN": {
+        "name": "HOW_TO_RETURN",
+        "description": "Use this subcategory for emails inquiring how to do a return or how to report a return to us or similar questions about the returns process. This includes emails mentioning issues with the link for returns label.",
+        "keywords": [
+          "return process",
+          "how to return",
+          "report return",
+          "label",
+          "link not working"
+        ],
+        "examples": [
+          "I want to return one pair of shoes from this order because my daughter didn’t like the colour. There’s a return label in the package, what else do I need to do?",
+          "I would like to make use of my right of withdrawal. The pair of adidas shoes does not fit.",
+          "I couldn’t find any clear instructions on how to return to you, please help.",
+          "I am returning the training tights from my order to you as they weren’t comfortable.",
+          "Hello! The link doesn't work. Can you send a new one?",
+          "Have sent them back because they were not good in the sole!"
+        ],
+        "instruction": "Handle return inquiries as follows:\n\n• Standard Process:\n - Return label in package\n - Place label on parcel exterior\n - No additional attachments or website registration needed\n - Refund issued immediately upon returned registered\n - Process takes up to 14 business days from when the parcel is dropped off by customer\n\n• Missing Label:\n - Provide download link: https://trackntrace.footwayplus.com/\n\n• Label Retrieval Problems:\n - Offer https://trackntrace.footwayplus.com/, ask to test and report if issue persists\n\n• Courier Information:\n - Instruct customer to use the courier specified on their return label (if customer mentions DHL is stated for return on website: correct is the courier on the label despite what the website says if another courier is stated there\n - Explain that drop-off locations are for the courier listed on their label\n - Mention collection booking only if customer asks about it\n - Don't assume same location for drop-off as original delivery necessarily correct\n\n• Multiple Returns:\n - Please do not combine returns from different orders so that correct processing of return can be done\n\n• Time-Sensitive Requests:\n - Standard processing time applies to all returns\n\n• Printing Issues (Only if mentioned):\n - No QR code system\n - Suggest alternative printing options\n\n• Policy Clarifications (Only if asked):\n - No return reporting, forms, or website registration required\n - Only return label needed\n\n• Timeframe:\n - Free returns for 365 days after order is placed\n\nIMPORTANT:\n- Answer only specific inquiries\n- Don't offer unsolicited information\n- Maintain helpful and nice tone\n- No action promises\n- Don't thank for returns\n- Always refer customer to use the courier specified on their return label despite what the website says if another courier is stated there\n-If the customer mentions that the label with DHL didn't work or the label is for GLS but the customer expected DHL:\ninform that many returns are handled by GLS and that the customer might want to check if GLS is the courier stated on the label\n- Do not confirm or deny any specific courier mentioned by the customer\n- If customer mentions a courier, remind them to check their label for the correct courier\n- Emphasize 14-business-day timeline from when return parcel is dropped off by customer\n- always question yourself if DHL is really correct or if the customer might mix this up because the parcel originally came with DHL but the return might be with GLS.",
+        "sub_categories": {}
+      },
+      "STATUS_RETURN": {
+        "name": "STATUS_RETURN",
+        "description": "Use this subcategory for emails inquiring about the status of return or refund. The customer might mention that a return was sent some time ago or they might inquire when to expect a refund for a return that was sent. This subcategory also includes emails reporting an issue with a return that was already dropped off.",
+        "keywords": [
+          "refund",
+          "status of return",
+          "return arrived",
+          "when refund",
+          "have sent back"
+        ],
+        "examples": [
+          "I have sent back my ordered jacket for ages ago, what happened? When do I get a refund?",
+          "How long do returns take with you? I sent back my order for a week ago and didn’t hear anything yet.",
+          "I got notification in Klarna that you received my return and that I should pay my invoice now but the amount isn’t correct, can you please check?",
+          "Is everything alright with my return?",
+          "Hello, it has already been a month since I sent the shoes back and still no contact from your side ...",
+          "Hi. Returned a package to you with Instabox 23 July. I still haven't received any money.",
+          "Hi I just wanted to know how long it will take before I get the money from my return i sent august 9th back.",
+          "Hi did you receive the return of this package SAM325852. Regards."
+        ],
+        "instruction": "Explain the returns process to customers as follows:\n\n• Timeline:\n  - The entire returns process can take up to 14 business days from the day the customer drops off the return\n\n• Refund process:\n  - Payment is processed once the return is registered in our system\n  - Refund is issued through the same payment method used for the original purchase\n  - The refund typically appears in the customer's account within 1-3 bank days after processing\n\n• Notifications:\n  - Customer will receive an email confirmation when the return is registered\n\nIMPORTANT:\n- Always provide the full 14-day timeline to set appropriate expectations\n- Do not promise faster processing or refunds\n- Emphasize that the refund will be sent via the original payment method\n- If asked about tracking the refund, advise customers to check their account or contact their bank after the 1-3 day period\n-For cases where the customer mentions a return is not moving or similar issues with a dropped off return, inform that we will get in touch with the courier to investigate.\n-Maintain a clear and helpful tone when explaining the process.",
+        "sub_categories": {}
+      },
+      "EXCHANGE": {
+        "name": "EXCHANGE",
+        "description": "Use this subcategory for emails inquiring about how to exchange a product in an order to another colour or size or even to a different product.",
+        "keywords": ["exchange", "size", "colour", "model"],
+        "examples": [
+          "The shoes were the wrong size, how can I get size 40 instead?",
+          "The color of this jacket doesn’t look like I expected, I would like to get the black one instead, how do I do?",
+          "How do I exchange to another size?"
+        ],
+        "instruction": "For exchange place new order for desired product and return the original item with return label that was included in the package. If a new return label is needed it can be downloaded here: https://trackntrace.footwayplus.com/ \n\nThe returned item will be refunded once the return is registered in our warehouse and a confirmation email will be sent.\n\nEverything after this is information that applies ONLY if the customer inquires specifically about this:\n\n• Do not approve returns for items that have been worn, used, or damaged. Politely explain that items must be unused to qualify for a return. If items are damaged they instead qualify for a claim if pictures are attached, if not, ask for pictures:\n\n• If customer asks about how to report return or about returns form:\n - Our returns policy doesn't require to report a return nor to fill in a form not to register on our website.\n\n• If the customer inquires about a change in price:\n - We can adjust to same price in first order for same product afterwards, for this just send a message after order has been placed.\n\n• If the customer mentions that the return is already sent on it's way:\n - Do not explain about return process but explain that need to place new order if other size or item is wished for.\n\n• If customer asks if we can directly exchange to another item or size:\n - Explain that we can't send out exchange product without new order being placed by customer.",
+        "sub_categories": {}
+      }
+    }
+  },
+  "SHIPPING": {
+    "name": "SHIPPING",
+    "description": "Use this category for emails inquiring about any issues with shipping or delivery. This may be delays, missing or wrong information in tracking or address, missing items, shippings marked as delivered when not, or unsuccessful deliveries which get returned.",
+    "keywords": [
+      "shipping",
+      "delivery",
+      "late",
+      "missing parcel",
+      "returned to sender",
+      "wrong address",
+      "tracking",
+      "shipping costs",
+      "do you ship to",
+      "are you able to deliver to",
+      "available country",
+      "offer shipping to",
+      "missing item"
+    ],
+    "examples": [
+      "Jag var hemma när paketet skulle komma, nu står det att jag inte hämtade ut det och att det skickas tillbaka till dig. Vänligen återbetala mig för detta.",
+      "Jag kan inte ta reda på när mitt paket kommer att levereras eftersom spårningen inte visar några uppdateringar, bara att fraktbolaget väntar på paketet. När kan jag räkna med en leverans? Kommer den överhuvudtaget? ",
+      "Mitt paket har inte kommit fram inom den tidsram ni utlovade. Vad kan ni göra för att lösa problemet?",
+      "Hi, What's the status of the order?",
+      "ag ska åka till mitt sommarställe på kanarieöarna och tänkte beställa dit, men jag får inte fram alternativet i kassan",
+      "I can’t find my country at the checkout?",
+      "Hello, do you offer shipping to Australia?",
+      "Do you guys deliver to the US?"
+    ],
+    "instruction": "If a parcel couldn't be delivered and is sent back: Investigate and then refund. If tracking information is missing or incorrect, if a parcel is marked as delivered but the customer cannot find it, or if there are no tracking updates for several days: immediately contact the delivery company and try to solve the issue as soon as possible. If the customer informs us that the address or phone number is wrong: contact the delivery company and try to correct the address or phone number for this order. Inform the customer about possible delays caused by these changes. If a parcel does not arrive on time: refund the shipping cost and inform the customer about free returns. If tracking shows that the parcel has been delivered to a pickup point: send this information to the customer. If the customer asks about import charges, customs duties, or VAT costs: inform them that there will be no additional costs, as customs clearance is prepaid by us. All available shipping destinations are shown in checkout. If your region or country is not visible, we do not ship to that specific region. We are constantly working to expand the markets we deliver to, and we hope to be able to offer delivery to your location in the future.",
+    "sub_categories": {
+      "FW_SHIPPING_PROCESS": {
+        "name": "FW_SHIPPING_PROCESS",
+        "description": "Use this subcategory for emails inquiring about our processes like requests for the tracking information, questions about what happens when a package doesn't get collected from shop (in time), questions on when the parcel gets dispatched or shipping time and inquiries about shipping costs being left on payment after a returned parcel.",
+        "keywords": [
+          "tracking info needed",
+          "parcel not collected from pickup point",
+          "when dispatch of parcel",
+          "delivery times",
+          "shipping costs left to pay",
+          "shipping costs",
+          "which collection point"
+        ],
+        "examples": [
+          "Do you know where I can find the tracking number for delivery?",
+          "Unfortunately, I have not yet received a consignment or tracking number or any goods.",
+          "Unfortunately, I forgot to collect the order below from the shop. Is it possible to send the parcel again?",
+          "Can't I just not pick up the parcel, will it not be sent again?",
+          "There is no tracking information. Please advise date of postage.",
+          "We ordered shoes on the 24th of September but I don't see them shipped yet. Are they in stock and when will they be dispatched?",
+          "I placed an order on 20 September, it has been paid for but has not yet been delivered to me. Please inform me about the status of the order",
+          "It would appear - having not sent my product and now refunding it, you have not refunded £5.99 shipping fee for the non existent delivery",
+          "Hi, I ordered by choosing delivery in UPS point but nothing tells me which one it will be.",
+          "Hi! How long delivery time should I expect if I buy running shoes? Regards."
+        ],
+        "instruction": "Handle tracking and delivery inquiries as follows:\n\n• No tracking link received:\n  - Send the tracking link for the parcel\n\n• General delivery timeframes:\n  - Inform that our warehouse dispatches parcels within 24 hours on working days\n  - Explain delivery time depends on chosen option and region: 1 to 6 business days after dispatch\n\n• UPS delivery time inquiry:\n  - Inform that UPS usually delivers within 3 to 5 business days\n\n• Uncollected parcels from pickup locations:\n  - Explain that uncollected parcels are automatically returned from the pickup location. Information about the hold period will be available once the parcel reaches the pickup location via the tracking link\n  - Inform that once returned to our warehouse, it's registered as a return and refunded\n\n• Order never delivered and refunded except for shipping:\n  - Inform the customer that we will now also remove the shipping costs\n\n• Delivery to pickup point:\n  - Explain that the pickup location can be chosen in checkout or is automatically selected based on the customer's Zipcode\n  - Inform that this information will be shown in the tracking\n\n• Returned parcels:\n  - Explain we cannot resend the same parcel if it was returned, as it's automatically registered as a return and refunded\n  - Ask the customer to place a new order for a new parcel to be sent.",
+        "sub_categories": {}
+      },
+      "WRONG_ADDRESS": {
+        "name": "WRONG_ADDRESS",
+        "description": "Use this subcategory for emails informing us that the delivery address for the order is wrong or for emails explaining that the delivery was done to the wrong address or a pickup location when this was not expected.",
+        "keywords": [
+          "wrong address",
+          "delivered to pickup point instead of home",
+          "delivered to wrong address",
+          "address change",
+          "wrong pickup shop",
+          "shipping error"
+        ],
+        "examples": [
+          "This order is to be delivered at my address, but UPS says that I have to pick it up at a pickup location.",
+          "Unfortunately, my order was delivered to a UPS centre where I was supposed to pick it up. However, my order should have been delivered to my home.",
+          "My parcel has arrived at the wrong UPS shop. Do you have the option to switch it to home delivery or to the nearest UPS pickup point?",
+          "Wrong address! My address is: 12 Abbey Road, 6HDR 7LB Oxford",
+          "It looks like the parcel is now shipped, can you please ask UPS to deliver to Gartenstrasse 35, 48143 Munster",
+          "Please notice that there is a spelling mistake. It should be 19 Queensway Road!",
+          "Last week was scheduled my parcel and now they say they got problem with my address, I tried to contact them but the auto pilot inform me is still in there warehouse.",
+          "I just noticed that my address got weird on my order BRD12345, it only says 11, but should be Drottninggatan 11.",
+          "Hi! My parcel got delivered but it looks like to the wrong address as I can't find it anywhere and the tracking mentions a name as receiver that I don't recognize. Please investigate!"
+        ],
+        "instruction": "Handle address and delivery location issues as follows:\n\n• Wrong or incomplete address for an order:\n   1. First, ask the customer to contact the courier directly to change the address\n    2. If customer has already tried and it wasn't possible, offer to contact the courier on their behalf\n    3. Warn that address changes may not always be guaranteed\n\n• Delivery to incorrect address:\n  - Inform that we need to investigate with the courier\n  - Promise to update the customer when we have more information\n  - Use the courier's name if that information is available\n\n• Delivery to pickup location instead of home:\n  - Explain possible reasons:\n    1. Operational decisions by the courier\n    2. Pickup point delivery may have been the selected option at checkout\n\n• Pickup location too far:\n  - If a closer location is available, offer to contact the courier to arrange redelivery\n  - Explain this process may take a few days.",
+        "sub_categories": {}
+      },
+      "STATUS_SHIPPING": {
+        "name": "STATUS_SHIPPING",
+        "description": "Use this subcategory for emails inquiring about the delivery and it's status. This includes emails mentioning no update in tracking for several days or other forms of delays, emails about the tracking showing the parcel got delivered but it hasn't or isn't found or the access point says that they didn't receive it. This subcategory is also for emails where the customer is missing the necessary code or info to collect the parcel and emails where the customer still hasn't received a parcel nor shipping confirmation several days after the order was placed.",
+        "keywords": [
+          "delayed delivery",
+          "missing tracking update",
+          "parcel not dispatched yet",
+          "collection code needed",
+          "waiting for contact lenses",
+          "parcel not delivered despite tracking indicating it was",
+          "collection point not in possession of parcel",
+          "not delivered",
+          "package not found"
+        ],
+        "examples": [
+          "I bought order RFT123455 trainers because it said they'd arrive in 2-3 days. They're now going to be 5 days late, at which point I'll be on holiday. Please can I refund these in advance of receiving them?",
+          "The order has still not arrived, although I have asked the courier to leave the parcel outside my door! I need lenses urgently! I demand refund of postage immediately. It has been 5 days and it should have arrived on Friday!",
+          "I am wondering about the delivery time of my order NET12340 that I ordered over a week ago, 21 September. When will the estimated delivery be?",
+          "My parcel arrived at the UPS parcel station on Friday. I have not received a code and cannot access my parcel!",
+          "For the below order, I have received multiple messages concerning delivery - but no delivery. Now they are apologizing for the delay without additional information. Could you do a check on what is going on? I have no serious way to connect with UPS",
+          "Unfortunately, I'm still waiting for a pair of trousers from you. Are they still coming?",
+          "According to UPS, my parcel was delivered on last Tuesday. I have not yet received the parcel. Still waiting for the order and delivery.",
+          "I did not receive my order- apparently delivery was attempted but I was in and I did not get it. It's been several days and I don't have any new updated delivery date",
+          "Unfortunately, I have not received the order below. We went on holiday on 4 September and when ordering, the indication was that they would be delivered before then. Unfortunately, the package was delayed and we were not able to receive it.",
+          "Unfortunately my Muckboot has not arrived. Please send me a confirmation",
+          "Hi, What's the status of the order?"
+        ],
+        "instruction": "Handle shipping status inquiries as follows and choose only the relevant and most fitting instructions:\n\n• Delivery delays or no tracking updates:\n  - Inform the customer we need to contact the courier\n  - Promise to provide more information as soon as we heard back from the courier\n\n• Parcel shown as delivered to home address but not found:\n  - Start an investigation with the courier\n  - Ask the customer:\n    1. Have neighbors been asked?\n    2. Have all possible delivery locations been checked (e.g., porch, back door, garage)?\n  - Advise the customer to check with household members if applicable\n\n• Tracking shows delivery was done to pickup point, but pickup point hasn't received the parcel:\n  - Advise waiting one more business day\n  - Explain tracking may prematurely indicate delivery\n  - Ask the customer to get back to us if this hasn’t been solved one business day later so that we can get in touch with the courier to get this sorted out\n\n• Collection code for parcel box not received:\n  - Inform the customer we will contact the courier\n  - Request the courier to resend the collection code\n\n• Order status 'WAITING FOR BACKORDER':\n  - Explain at least one item is a backorder item\n  - For contact lenses: Specify 4-9 business days dispatch time after order placement.",
+        "sub_categories": {}
+      },
+      "MISSING": {
+        "name": "MISSING",
+        "description": "Use this subcategory for emails mentioning that there was one or several items missing in the delivered parcel or emails where the customer assumes the parcel to be stolen or taken in any way after it was delivered to the correct address.",
+        "keywords": [
+          "missing item",
+          "part of order missing",
+          "not received a product from order",
+          "theft",
+          "package stolen",
+          "package gone",
+          "parcel not found despite correct delivery",
+          "incomplete",
+          "empty box",
+          "Delivery address correct but no package"
+        ],
+        "examples": [
+          "I have not been able to locate my order and fear that they have been stolen by them being left outside my front door.. Could you kindly advise if this was actually left or was it provided to someone please? I've asked my neighbours, and no one knows anything about them.",
+          "I am writing regarding my order. I had ordered two pairs of kids trainers. But you sent me only one pair. When will the other pair of shoes arrive?",
+          "Picked out my package from you as usual and when I open up, the glue is not stuck to the box and it also goes up easily without any force. Opens up and there is no content in there?",
+          "I ordered two pairs of shoes. The bag they were to come in was not closed see attached file and one pair is missing. It was the dc shoes that did not arrive.",
+          "The tracking of my parcel shows a picture of the parcel being delivered to me but when I came home there was nothing there. I am afraid someone stole my package. I want a new parcel sent out or a full refund.",
+          "Are you kidding me? The tracking says the parcel got delivered but when I came home there was no delivery. I need this ASAP.",
+          "Yesterday, when I went and collected my parcel from the collection box all I received was an empty plastic bag. Is this a joke? Send me my items ASAP!!"
+        ],
+        "instruction": "If there is one or several items missing from the parcel inform the customer that we will start to investigate with our warehouse and the courier. If the customer hasn't already mentioned the state of the wrapping, packaging or box, ask if there was any damage or wholes in the bag or box and if so please send over some images. This helps us to investigate. If the email is about the whole package or parcel missing and theft is assumed, ask customer to check all possible locations where it might have been left and also with neighbors to see if one of them might have taking it in. Do not ask the questions just mentioned if the customer has already mentioned that this was already checked. If all neighbors and possible locations have been checked, let us know and we start an investigation with the courier.",
+        "sub_categories": {}
+      }
+    }
+  },
+  "PRODUCT": {
+    "name": "PRODUCT",
+    "description": "Use this category for legitimate customer emails seeking information about: 1: Product sizes, dimensions, or fit 2: Specific applications or purposes of our products. This category is strictly for genuine customer inquiries about our existing product line. It should NOT include: 1: Promotional emails or attempts to sell products to us 2: General product announcements or newsletters 3: Unsolicited offers or spam emails mentioning product sizes or availability.",
+    "keywords": [
+      "how does it fit",
+      "is this color in stock",
+      "women's size chart",
+      "men's fit guide",
+      "product dimensions",
+      "when will you restock",
+      "different model options",
+      "product features",
+      "specific use case",
+      "is this suitable for"
+    ],
+    "examples": [
+      "Hej, på er hemsida säger produktinformationen att den här jackan är för män men på bilderna ser den mer ut som en damjacka. Vem är jackan till för? Mvh Johan",
+      "Hej, har ni adidas superstar white i storleken 39 i lager? Eller när kommer det i lager igen? tack!",
+      "Tjena, jag vill veta hur mycket SIUX TRILOGY CONTROL PRO 4 racket väger eftersom jag behöver det till en specifik tävling. Hälsningar!"
+    ],
+    "instruction": "If customer asks about specific for a product like sizing or specific area of use and if we don't have this information in our system, search for relevant information on the internet. We don't have current information on if and when this products might come back in stock. All available sizes are shown on our website. Never say that we do not sell a product unless explicitly stated in our system. We are not affiliated with any shops or repair stores and are therefore not able to recommend one. Do not guide customer to a different customer support.",
+    "sub_categories": {
+      "PRODUCT_AVAILABILITY": {
+        "name": "PRODUCT_AVAILABILITY",
+        "description": "Use this subcategory for emails inquiring about the availability of specific products, sizes or brands. This includes questions about old models returning to stock, re-stocking sizes or brands and if we can notify the customer about when a specific product is back in stock.",
+        "keywords": [
+          "re-stock",
+          "re-fill",
+          "is this product available",
+          "when will (product) be back in stock again",
+          "notify me when this size is available",
+          "will this size be available",
+          "do you have these in another size",
+          "sold out"
+        ],
+        "examples": [
+          "Hej, det var ett tag sen ni hade dessa i sortimentet, finns det några på ingång i närtid i storlek 49-50?",
+          "Får i denne farve på lager igen inden for nærmeste fremtid i str 28?",
+          "Please let me know when these jeans are back in size 32",
+          "Why are so many sizes sold out?",
+          "Kommer ni att få in fler smaker till Velo?",
+          "I wanted to see if you'll be restocking item number 60294-67 in eu size 38 and if so when.",
+          "I have ordered the same shoe from you multiple times but now I can't find it?",
+          "Har ni några sneakers just nu i storlek 51-51,5. När jag filtrera på det får jag upp skor men sen när jag går in på skon finns inte den storleken",
+          "Hur ofta fyller ni på lagret?"
+        ],
+        "instruction": "We don't have current information about if and when products might come back in stock. All available sizes are shown on our website. Recommend checking back on the website as available sizes/ models are regularly updated. Never say that we do not sell a product unless explicitly stated in our system. Do not invent or assume product availability. We are not affiliated with any shops or repair stores and are therefore not able to recommend one. Do not provide made up solutions, for fitting tips: ask the customer to explore manufactures size guides. Do not guide customer to a different customer support and choose only relevant and most fitting instructions.",
+        "sub_categories": {}
+      }
+    }
+  },
+  "CUSTOMS": {
+    "name": "CUSTOMS",
+    "description": "Use this category for emails inquiring customs related inquiries like a proforma or commercial invoice for customs or possible costs for customs clearance. This includes emails asking for 3 copies of an invoice for the return.",
+    "keywords": [
+      "commercial invoice",
+      "proforma invoice",
+      "customs",
+      "customs documents",
+      "customs clearance",
+      "customs fees",
+      "import taxes",
+      "import duties",
+      "paperwork"
+    ],
+    "examples": [
+      "DHL asks me for a proforma invoice but I don't know how to get one. Can you help me?",
+      "Saw your shipping from Sweden, will I need to pay any fees for customs? It doesn't say that on your website.",
+      "What do I need to do to get my parcel through customs? I'm in Canada and DHL has contacted me about my parcel but I don't know what is expected from me.",
+      "I live in the UK and wanted to order from you guys, do I need to pay import taxes?",
+      "I wanted to return a product to you but realised now that you are based in the EU, what do I need to get my return through customs."
+    ],
+    "instruction": "For returns we use a digital process where all necessary documents are provided directly to the courier, only our return label is needed. For orders to countries in Europe do we take care of any customs fees, what customer sees in checkout is what needs to be paid, nothing additional. For order to countries outside of Europe might customs charges apply: The courier will contact the customer and inform about these fees which need to be paid in order to receive parcel.",
+    "sub_categories": {
+      "CUSTOMS_EUROPE": {
+        "name": "CUSTOMS_EUROPE",
+        "description": "Use this subcategory for emails from customers in Europe that are inquiring about anything related to the customs process. This can be questions about a proforma invoice for a return or if there are any customs fees for the customer.",
+        "keywords": [
+          "commercial invoice",
+          "proforma invoice",
+          "customs",
+          "customs fees",
+          "import taxes",
+          "paperwork",
+          "import duties"
+        ],
+        "examples": [
+          "Saw your shipping from Sweden, will I need to pay any fees for customs? It doesn't say that on your website.",
+          "I live in the UK and wanted to order from you guys, do I need to pay import taxes?",
+          "I wanted to return a product to you but realised now that you are based in the EU, what do I need to get my return through customs.",
+          "I have a returns label but I believe I need 3 copies of some paperwork to go with my returned parcel. Could you please advise where I can find this paperwork."
+        ],
+        "instruction": "For returns we use a digital customs process where all necessary documents are provided directly to the courier, only our return label is needed. For shipments to countries in Europe do we take care of any customs fees, what customer sees in checkout is what needs to be paid, nothing additional.",
+        "sub_categories": {}
+      },
+      "CUSTOMS_ROW": {
+        "name": "CUSTOMS_ROW",
+        "description": "Use this subcategory for emails from customers outside of Europe that are requesting help with the customs clearance or want to know if they need to pay the import duties. This includes emails mentioning that they received a message from the courier regarding a form or invoice that needs to be filled out for the customs process.",
+        "keywords": [
+          "commercial invoice",
+          "proforma invoice",
+          "customs",
+          "customs documents",
+          "customs clearance",
+          "customs fees",
+          "Canada customs"
+        ],
+        "examples": [
+          "DHL asks me for a proforma invoice but I don't know how to get one. Can you help me?",
+          "I have made an order with you guys and DHL is asking for a form. I'm unsure how to fill it out so if I could get some guidance that would be great.",
+          "I want to place an order with you. I live in Canada, will I need to pay the import taxes?",
+          "Gotpouches, why is my parcel stuck in customs? What do I need to do?",
+          "Hi I need an invoice for Canadian customs which has more detailed information on the products shipped. Can you provide this?",
+          "Canada Customs is not releasing this parcel as DHL says that the invoice does not have the required information about the products on it. Can you please advise what to do?",
+          "I have been having a really hard time with the shipment order GOT1607. Since last week, I've been dealing with DHL trying to get my shipment cleared everyday till today. I had to complete 3 documents and it is still not moving. On hold for clearance since last week."
+        ],
+        "instruction": "We will fill out the proforma invoice directly with DHL Express through their system, the customer doesn't need to fill out the proforma invoice as it gets send in from us to DHL but note that them processing it might take a few days. Information like the nicotine content (if applicable) will be shown on the invoice we send int. For customs clearance the customer will need to accept to pay the import duties and declare that the content of the parcel is for personal use. If the customer asks if they need to pay the import duties, reply that the customer pays the import duties.",
+        "sub_categories": {}
+      }
+    }
+  },
+  "RECEIPT": {
+    "name": "RECEIPT",
+    "description": "Use this category for customers asking for a receipt of their purchase. This receipt or invoice might customer need to declare taxes or get reimbursement from employer or similar. Not always is a reason mentioned.",
+    "keywords": ["receipt", "invoice", "VAT invoice"],
+    "examples": [
+      "Hi, I need the invoice for my latest purchase with the VAT info included.",
+      "I couldn't find where to download the invoice for my recent order on your website, please help.",
+      "Please send me the receipt for my order"
+    ],
+    "instruction": "Customer will find the receipt/ invoice in the attachments."
+  },
+  "CANCEL": {
+    "name": "CANCEL",
+    "description": "Use this category for emails requesting to cancel an order. This includes orders where the customer mentioned that it needs to be cancelled because for example the wrong size was ordered or the wrong address put in.",
+    "keywords": [
+      "cancel",
+      "delete order",
+      "cancel order",
+      "cancel to reorder correct",
+      "makulera order",
+      "annullera beställning",
+      "stoppa ordern"
+    ],
+    "examples": [
+      "Can i cancel this order? Found a shoe for me in another store.",
+      "I want to cancel my order I placed just a few hours ago.",
+      "Jag vill avbryta min order tack.",
+      "Hej vill avboka denna order.",
+      "Hi can you cancel this order?",
+      "Remove my latest order, I ordered mistakingly."
+    ],
+    "instruction": "Handle order cancellation requests as follows:\n\n• If the order can still be cancelled:\n  - Inform the customer that the order has been cancelled\n  - Provide a general statement about the refund process:\n    * Explain that if payment was processed, it will be refunded automatically\n    * State that refunds typically appear in the customer's account within a few bank days\n\n• If the order cannot be cancelled:\n  - Inform the customer that cancellation is no longer possible as the order has progressed to far already\n  - Explain the return option:\n    * We offer free returns\n    * A return label is included in the parcel\n    * Customer can use this label to return the item at no cost\n\nIMPORTANT:\n- Verify the order status before providing information\n- Be clear about whether cancellation was possible or not\n- Use general statements about refunds without assuming payment status\n- Do not promise specific refund dates, but give a general timeframe.",
+    "sub_categories": {
+      "UNCLEAR_C_REQUEST": {
+        "name": "UNCLEAR_C_REQUEST",
+        "description": "Use this subcategory for emails where a cancellation might be necessary but the request is not totally clear. This might be questions about the exact timeframe for the delivery or that a wrong address was put in, so cases where the customer didn't explicitly mentions that they want to cancel the order. This also includes emails where the customer asks if cancelling the order is the best solution for a mentioned problem.",
+        "keywords": ["wrong address", "delivery not in time", "customs fees"],
+        "examples": [
+          "If you cannot guarantee delivery by tomorrow please cancel the order and issue a refund.",
+          "Hi, I just a minute ago ordered a beanie from your online store. I'd like to inform I accidentally left one part from the address part wrong.",
+          "My order doesn't seem to be shipped yet, if it doesn't get shipped soon it will be to late and I might need to buy somewhere else.",
+          "I have put in the wrong address, can you change it or do I need to cancel and place a new order?",
+          "This is unacceptable. My order still isn't shipped, get this out now or I want my money back!",
+          "I didn't realise you were based in Sweden, will I be charged for customs? In that case I want to cancel my order."
+        ],
+        "instruction": "DO NOT cancel this order and let the agent decide if that is necessary or not. Ask the customer if they want to cancel the order as a solution to the problem if no other instructions are provided. In case of wrong address, do not make promises about changing the address.",
+        "sub_categories": {}
+      },
+      "CANCEL_REQUEST": {
+        "name": "CANCEL_REQUEST",
+        "description": "Use this category for emails requesting to cancel an order. This includes orders where the customer mentioned that it needs to be cancelled because for example the wrong size put in.",
+        "keywords": [
+          "cancel",
+          "delete order",
+          "cancel order",
+          "cancel to reorder correct",
+          "makulera order",
+          "annullera beställning",
+          "stoppa ordern"
+        ],
+        "examples": [
+          "Can I still cancel this order? Found a shoe for me in another store.",
+          "I want to cancel my order I placed just a few hours ago.",
+          "Jag vill avbryta min order tack.",
+          "Hej vill avboka denna order.",
+          "Hi can you cancel this order?",
+          "Vänligen makulera mitt köp jag la för några minuter sedan. Ordernummer HEP1234"
+        ],
+        "instruction": "Handle order cancellation requests as follows:\n\n• If the order can still be cancelled:\n  - Inform the customer that the order has been cancelled\n  - Provide a general statement about the refund process:\n    * Explain that if payment was processed, it will be refunded automatically\n    * State that refunds typically appear in the customer's account within a few bank days\n\n• If the order cannot be cancelled:\n  - Inform the customer that cancellation is no longer possible as the order has progressed to far already\n  - Explain the return option:\n    * We offer free returns\n    * A return label is included in the parcel\n    * Customer can use this label to return the item at no cost\n\nIMPORTANT:\n- Verify the order status before providing information\n- Be clear about whether cancellation was possible or not\n- Use general statements about refunds without assuming payment status\n- Do not promise specific refund dates, but give a general timeframe.",
+        "sub_categories": {}
+      }
+    }
+  },
+  "UNSUBSCRIBE": {
+    "name": "UNSUBSCRIBE",
+    "description": "Use this category for emails requesting to stop sending any more newsletter or advertising emails.",
+    "keywords": [
+      "don't send me emails",
+      "I don't want any more emails",
+      "don't want newsletter",
+      "stop sending emails",
+      "unsubscribe",
+      "take me off email list"
+    ],
+    "examples": [
+      "Stop sending me emails!!!",
+      "I don't want to receive any more newsletter emails.",
+      "Unsubscribe me from your newsletter",
+      "I don't want your emails",
+      "Please remove me from your newsletter list",
+      "Apparently it didn't work, because it's still going on that I get emails from you.",
+      "Take me off your list ASAP or I will write a very bad review.",
+      "Hi, I would like you to remove my email address from your mailings of offers etc. When I click on the unsubscribe link, it does not work."
+    ],
+    "instruction": "Inform the customer that they can unsubscribe from our emails by clicking on the 'unsubscribe' button on the bottom of our emails. Do not translate 'unsubscribe' when informing about this button as it is always 'unsubscribe'.",
+    "sub_categories": {
+      "UNSUBSCRIBE_GENERAL": {
+        "name": "UNSUBSCRIBE_GENERAL",
+        "description": "Use this subcategory for emails inquiring on how to unsubscribe from newsletter or requesting that we stop sending newsletter or advertising emails where no issue with unsubscribing has been mentioned.",
+        "keywords": [
+          "unsubscribe",
+          "don't send me emails",
+          "How do I unsubscribe?",
+          "remove me from email list",
+          "stop sending emails"
+        ],
+        "examples": [
+          "Stop sending me emails!!!",
+          "I don't want to receive any more newsletter emails.",
+          "Unsubscribe me from your newsletter",
+          "I don't want your emails",
+          "Please remove me from your newsletter list",
+          "How can I unsubscribe from newsletter?",
+          "Jag kommer fortsätta handla hos er men önskar bara inte få nyhetsbrev 😊",
+          "Hej, jag vill avregistrera min mejl från alla utskick."
+        ],
+        "instruction": "Inform the customer that they can unsubscribe from our emails by clicking on the 'unsubscribe' button on the bottom of our emails. Do not translate 'unsubscribe' when informing about this button as it is always 'unsubscribe'."
+      },
+      "UNSUBSCRIBE_AGENT_REQ": {
+        "name": "UNSUBSCRIBE_AGENT_REQ",
+        "description": "Use this subcategory for emails requesting to remove the email from the newsletter list as the unsubscribe button didn't work or wasn't found. This subcategory is therefore for emails mentioning issues with unsubscribing from our newsletter.",
+        "keywords": [
+          "Unsubscribe doesn't work",
+          "still receive emails though I unsubscribed",
+          "removing from list didn't work"
+        ],
+        "examples": [
+          "I clicked on 'unsubscribe' but I still get emails, please help me.",
+          "You still send me emails! Stop that and take me off your list ",
+          "There is no button to click to unsubscribe!!!",
+          "Hi, I would like you to remove my email address from your mailings of offers etc. When I click on the unsubscribe link, it does not work.",
+          "Apparently it didn't work, because it's still going on that I get emails from you.",
+          "Take me off your list ASAP or I will write a very bad review."
+        ],
+        "instruction": "Let the customer know, that we are sorry for this issue and that we manually remove the email from the list now. Ask the customer to contact us again if there are still emails coming after today."
+      }
+    }
+  },
+  "PRICE": {
+    "name": "PRICE",
+    "description": "Use this category for emails inquiring about price matching and discount codes.",
+    "keywords": [
+      "price match",
+      "price matching",
+      "forgot discount code",
+      "didn't receive discount code",
+      "newsletter discount",
+      "new customer discount",
+      "newsletter code",
+      "cheaper somewhere else",
+      "found it cheaper",
+      "price changed suddenly"
+    ],
+    "examples": [
+      "Hi guys, I'd like to order the nike jacket in size L but I found it on another website for 45 GBP, do you do price matching?",
+      "Do you have price match with other websites?",
+      "I ordered yesterday evening but I forgot to put in my discount code. Can I get the discount on my current order or do I need to return it and order again?",
+      "Forgot my code, can you apply that for me? It's better for the environment if I don't have to return and order again...",
+      "I just got the code SAMFAM150 but ordered right before, please can you add that afterwards?",
+      "I subscribed to your newsletter but the discount code wasn't send out to me. How do I get that?",
+      "I want to order from your website and wonder if you have any special deals for new customers? I have never ordered from you before.",
+      "I had some hats in my basket yesterday and today when I was ready to order the price went up. That is really annoying, what can you do in that case?"
+    ],
+    "instruction": "We do not have price matching in general. We can apply a discount code afterwards but only if no other code or campaign was already used. New customers can subscribe to our newsletter to get a welcome code. If the inquiry is about a size exchange for the same product where the price has gone up since the first order inform the customer to just place new order and inform us about the new order number afterwards, we will adjust price to same as before.",
+    "sub_categories": {
+      "PRICE_MATCH": {
+        "name": "PRICE_MATCH",
+        "description": "Use this subcategory for emails inquiring if we do offer price matching with other retailers or websites.",
+        "keywords": [
+          "price match",
+          "price matching",
+          "found it cheaper",
+          "cheaper somewhere else"
+        ],
+        "examples": [
+          "Hi guys, I'd like to order the nike jacket in size L but I found it on another website for 45 GBP, do you do price matching?",
+          "Do you have price match with other websites?",
+          "I found these shoes cheaper somewhere else, can I get the same price with you?"
+        ],
+        "instruction": "Inform the customer that we always strive to offer great deals and good prices but that we do not offer price matching with other s. If instructed by support agent we will match a price or if it was just a size exchange. For price adjusment in size exchange for same product ask customer to place new order and send us the new order number, we will then adjust price for item to the same as before.",
+        "sub_categories": {}
+      },
+      "DISCOUNT_CODE": {
+        "name": "DISCOUNT_CODE",
+        "description": "Use this subcategory for emails where the customer has forgotten to apply a discount code or generally inquiring if a discount can be added.",
+        "keywords": [
+          "forgot discount code",
+          "didn't receive discount code",
+          "newsletter discount",
+          "new customer discount",
+          "newsletter code",
+          "apply discount"
+        ],
+        "examples": [
+          "I ordered yesterday evening but I forgot to put in my discount code. Can I get the discount on my current order or do I need to return it and order again?",
+          "Forgot my code, can you apply that for me? It's better for the environment if I don't have to return and order again...",
+          "I just got the code SAMFAM150 but ordered right before, please can you add that afterwards?",
+          "I subscribed to your newsletter but the discount code wasn't send out to me. How do I get that?",
+          "I want to order from your website and wonder if you have any special deals for new customers? I have never ordered from you before."
+        ],
+        "instruction": "We can apply a discount code afterwards if no other code or campaign was already used. If the customer didn't already mention the exact discount code, ask which code should be applied and we take care of it. If the email inquires about offers for new customers, inform the customer that there's oftentimes the option to subscribe to the newsletter to get a welcome code. If the customer mentions that the discount code wasn't received after subscribing to the newsletter, ask the customer to check the spam and the advertising folder.",
+        "sub_categories": {}
+      }
+    }
+  },
+  "SPAM": {
+    "name": "SPAM",
+    "description": "Use this category for spam or advertising emails and automatic responses to an email. A spam email can be detected by offers that are made for purchases or cooperation suggestions. An automatic response email can be detected by phrases like 'automatically refected' or 'automatic response' and usually inform about that email address not being in use anymore or the person being out of office for a specific time. This category is also for backoffice emails informing us about a 'delorder' or 'nollorder' or about a new Trustpilot review and for email replies from our couriers.",
+    "keywords": [
+      "looked at your website for improval suggestions",
+      "improve your Google search result",
+      "special offer",
+      "we are a manufacturer",
+      "automatically refected",
+      "I'm on holiday until",
+      "out of office until",
+      "we can now be reached under",
+      "You have won 1,5 billion dollar",
+      "you were chosen to be the winner",
+      "nollorder",
+      "delorder",
+      "uppdatering av Magento",
+      "pca.sweden@ups.com",
+      "Vi har registrert saken med saksnummer",
+      "ernexpnordics@ups.com",
+      "VAT SE556109453201",
+      "Helthjem' via storesuppor",
+      "Exception Notification",
+      "Trustpilot A/S",
+      "stjärnigt omdöme"
+    ],
+    "examples": [
+      "Dear sender Coop Mineraloel AG has rebranded and is now called Coop Pronto AG. You have sent an e-mail to our old e-mail address coop-mineraloel.ch. Please update the e-mail address for your contact at cooppronto.ch.",
+      "Hello, thank you for your message. I'm out of office right now until the 7th of september. In urgent cases please contact my colleague: abc@def.com",
+      "Hello and thank you for contacting me. I'm on holiday and will be reachable again in week 49.",
+      "This is Sunsky Apparel and Accessories MFG.CO.,Ltd.is a manufacturer specializing in manufacturing Apparels.",
+      "We are a manufacturer from China and offer handmade bags and accessories.",
+      "I have a special offer for you today: Purchase 100 item for a disocunt of an extra 5%",
+      "Hello, We are excited to introduce our newest product - The 4 Power & 3 CCT switchable LED Flood Light. With its beautiful appearance and unique design, this robust light offers a stylish solution for your lighting needs.",
+      "Dzień dobry,Państwa strona footway.com z bloga może przyciągać większą ilość klientów...Czy mogę (tak jak pisałam w poprzednim mailu) przygotować, bezpłatną i niezobowiązującą strategię Państwa bloga oraz przykładowe skutecznych 10x tematów, na które warto pisać?",
+      "Your message to was automatically rejected: Quota exceeded (mailbox for user is full)",
+      "Hi Myfriends, We are currently in the process of closing our Best of Christmas features in national press titles such as the Times, Daily Mail, Guardian and similar.",
+      "Greetings Customer, Unfortunately, there has been an issue processing your billing information for this month. You will be able to update your billing information quickly and easily using our secure server.",
+      "****** SOL - Automatyczna odpowiedź (SOLENEWS!) ******",
+      "Hi,nice to contact you again! I'm Tina, freight manager of Easefreight, from the AI freight agent network of NetEase, a listed company in China.",
+      "Are you looking to increase your website's visibility? Our *SEO optimization services *can help you rank higher in search results and attract more traffic to your site.",
+      "Jag heter Danilo och kommer från PriceRadar. Jag vet att det inom klädbranschen är avgörande att ha en konkurrenskraftig prisstrategi för att inte tappa mark och marginaler.",
+      "Delorder på order RFT188273 Levererat antal på order RFT188273 avviker från beställt antal. Det kan bero på delleveranser, saknade varor eller avbeställd order.",
+      "Levererat antal på order SAM395865 är noll i antal. Det kan bero på saknade varor eller avbeställd order. från lager: Kjula",
+      "Ordern är avbruten men något gick fel vid uppdatering av Magento och/eller betalningsleverantör. Kontrollera både Magento och betalningsleverantör och återbetala manuellt vid behov.",
+      "Subject: [EXTERNAL] Re: UPS [E-ATB963] Tracking Number: 1Z5V73736871009094 Exception Notification. CAUTION! This email originated outside of the organization. Please do not open attachments or click links from an unknown or suspicious origin.",
+      "UPS Sweden AB Phone: +46 (o) 77 - 662 00 08 Technical Helpdesk: +46 (o) 8 – 579 290 41 E-mail: preferredse@ups.com VAT SE556109453201 Säte: United Parcel Service Sweden AB, Elektronikhöjden 5, 175 43 Järfälla, Stockholm",
+      "Vi har registrert saken med saksnummer 29205632, og vil besvare henvendelsen så fort det lar seg gjøre.",
+      "Du har ett nytt 3 stjärnigt omdöme. Trustpilot A/S Pilestraede 58, 5:e våningen, 1112 Köpenhamn K"
+    ],
+    "instruction": "DO NOT GENERATE AN ANSWER WITHOUT FURTHER INSTRUCTIONS PROVIDED"
+  }
+}
