@@ -43,12 +43,6 @@ Example report output can be found in last_run.md.
    - `polly_runs.json`
 ---
 
-## Running the pipeline
-
-```bash
-python main.py
-```
-
 ## usage
 
 ```bash
