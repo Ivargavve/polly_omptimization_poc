@@ -27,29 +27,29 @@ Knowledge tree json before and after running the poc.
 
 ---
 
-## Setup instructions
+## Setup
 
-1. **Clone the repository**
+1. **Clone**
    ```bash
    git clone <your-repo-url>
    cd POLLY_OMPTIMIZATION_POC
    ```
 
-2. **Set up a virtual environment**
+2. **Set up a venv**
    ```bash
    python -m venv .venv
    .venv\Scripts\activate
    ```
 
-3. **Install dependencies**
+3. **Install requirements**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Prepare data**  
-   Place the following files inside the `data/` folder
-   - `polly_knowledge.json`
-   - `polly_runs.json`
+4. **Prepare files**  
+   Place the following files inside the data folder
+   polly_knowledge.json
+   polly_runs.json
 ---
 
 ## usage
@@ -57,16 +57,6 @@ Knowledge tree json before and after running the poc.
 ```bash
 python main.py
 ```
-
-### output
-Before patch (validation): {'keyword_accuracy': 0.075, 'rougeL_templ_vs_human': 0.14}
-After patch (validation): {'keyword_accuracy': 0.178, 'rougeL_templ_vs_human': 0.122}
-
-Best improved example
-
-- ROUGE-L before: 0.049
-- ROUGE-L after: 0.100
-...
 
 ### This proof of concept shows that
 It's possible to automate the process of evaluating and optimizing the json file
