@@ -1,4 +1,4 @@
-# Polly proxy, suggest impovments
+# Polly proxy, suggest improvements such as keywords and hints.
 from collections import Counter
 import re
 
@@ -14,6 +14,11 @@ def _get_cat_cfg(knowledge, name):
 
 # Suggest new keywords for a category by analyzing emails
 def suggest_keywords(train_df, knowledge, category, max_new=3):
+    # Take all training emails for the given category.
+    # Extract frequent words with 4 or more letters.
+    # Remove ones already in the knowledge tree.
+    # Return new keyword suggestions.
+
     subset = train_df[train_df["category"] == category]
     text = " ".join(subset["incoming_email"].tolist()).lower()
     tokens = re.findall(r"[a-z]{4,}", text)
@@ -26,10 +31,13 @@ def suggest_keywords(train_df, knowledge, category, max_new=3):
 
 # Suggest hints for writing better instructions
 def suggest_instruction_hint(train_df, category):
+    # If human replies mention 'tracking', suggest adding a tracking reminder.
+    # If 'refund' is mentioned, suggest adding refund time info.
+
     subset = train_df[train_df["category"] == category]
     text = " ".join(subset["human_reply"].tolist()).lower()
     if "tracking" in text:
-        return "Add reminder to include tracking link if available."
+        return "Add reminder to include tracking information if available."
     if "refund" in text:
         return "Emphasize refund timeframe in reply."
     return None

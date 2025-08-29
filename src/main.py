@@ -37,6 +37,9 @@ def evaluate(df, knowledge):
     return {"keyword_accuracy": hits/n, "rougeL_templ_vs_human": rouge_sum/n}, out
 
 # Split dataset into train and validation by timestamp
+# train_df are all emails before the cutoff date used to suggest improvements and patches
+# val_df are all emails after the cutoff date used to test if patches work on "future" data
+# This makes the evaluation more realistic, since in practice I only have past data to optimize
 def split_by_time(df, val_cutoff_iso):
     train = df[df["final_ts"] < val_cutoff_iso]
     val = df[df["final_ts"] >= val_cutoff_iso]
@@ -66,7 +69,7 @@ def main():
     ktree = load_knowledge()
     print(f"Loaded {len(runs)} runs, {len(ktree)} categories in knowledge tree")
 
-    # show single worst case from dataset Rouge-L score
+    # show single worst case from dataset Rouge-L score (only for debugging)
     worst = runs.nsmallest(1, "score")[["incoming_email","llm_reply","human_reply","score","category"]]
     for _, row in worst.iterrows():
         r = rougeL(row["llm_reply"], row["human_reply"])
@@ -79,14 +82,14 @@ def main():
 
     train_df, val_df = split_by_time(runs, args.val_cutoff)
     if len(train_df) == 0 or len(val_df) == 0:
-        print("\nWarning: empty train/val split. Adjust --val_cutoff.")
+        print("\nNo data found for train/validation split.")
         return
 
     # Before patch evaluation
     base_metrics, base_rows = evaluate(val_df, ktree)
     print("\nBefore patch (validation):", {k: round(v,3) for k,v in base_metrics.items()})
 
-    # Generate patch (keywords + instruction hints)
+    # Generate patch (keywords + instruction suggestions)
     patch_ops = []
     cands = suggest_keywords(train_df, ktree, args.category, max_new=args.max_keywords)
     if cands:
@@ -127,7 +130,7 @@ def main():
 
     patch_file, knowledge_file = save_outputs(patch_ops, ktree_patched, outdir="../outputs")
 
-    # write a short report of changes from the latest patch and best improved example
+    # write a short report, last_run, of changes from the latest patch and best improved example
     report_path = "../outputs/reports/last_run.md"
     os.makedirs(os.path.dirname(report_path), exist_ok=True)
     added_keywords, instr_changed = parse_patch_summary(patch_ops)
