@@ -47,9 +47,7 @@ Knowledge tree json before and after running the poc.
    ```
 
 4. **Prepare files**  
-   Place the following files inside the data folder
-   polly_knowledge.json
-   polly_runs.json
+   Place, polly_knowledge.json and polly_runs.json inside the data folder
 ---
 
 ## usage
@@ -57,8 +55,3 @@ Knowledge tree json before and after running the poc.
 ```bash
 python main.py
 ```
-
-### This proof of concept shows that
-It's possible to automate the process of evaluating and optimizing the json file
-from the emails using the human replies as reference. 
-This makes knowledge tree maintenance scalable and reproducible even though this particular solution is only a poc and would not work great in practice :D
