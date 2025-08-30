@@ -11,7 +11,7 @@ The point here is to show the pipeline and not a production ready solution!!)
 - Loads the runs log and extracts data from it.
 - Loads the knowledge tree json.
 - Filters runs to English only (easier debugging)
-- Evaluate performance before patch using Rouge-L value and Keyword Accuracy. Keyword accuracy is an additional metric I've made to measure how often the classification itself was correct.
+- Evaluate performance before patch using Rouge-L value and Keyword Accuracy. Keyword accuracy is an additional metric I've made to measure how often the classification of the category itself was correct.
 - Suggests improvements with new keywords and instuction suggestions.
 - Creates a patch that writes a new knowledge tree.
 - Re-evaluates performance values comparing the original knowledge json file and the new "patch" json file.
