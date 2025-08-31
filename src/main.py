@@ -18,16 +18,16 @@ def get_cat_cfg(tree, name):
             return subs[name]
     return {}
 
-# Evaluate model predictions vs human replies
+# Evaluate model predictions
 def evaluate(df, knowledge):
     hits, rouge_sum, out = 0, 0.0, []
     for _, r in df.iterrows():
-        pred = route_email(r["incoming_email"], knowledge)
-        hits += 1 if pred == r["category"] else 0
+        pred = route_email(r["incoming_email"], knowledge) # prediction
+        hits += 1 if pred == r["category"] else 0 # hit +1 if cat matches
         cfg = get_cat_cfg(knowledge, pred) or get_cat_cfg(knowledge, r["category"])
-        templ = compose_reply(r["incoming_email"], cfg or {})
-        rL = rougeL(templ, r["human_reply"])
-        rouge_sum += rL
+        templ = compose_reply(r["incoming_email"], cfg or {}) # compose reply
+        rL = rougeL(templ, r["human_reply"]) # compute Rouge-L score
+        rouge_sum += rL 
         out.append({
             "pred": pred, "correct_cat": r["category"], "rouge": rL,
             "incoming": r["incoming_email"], "templated": templ, "human": r["human_reply"],
@@ -39,7 +39,7 @@ def evaluate(df, knowledge):
 # Split dataset into train and validation by timestamp
 # train_df are all emails before the cutoff date used to suggest improvements and patches
 # val_df are all emails after the cutoff date used to test if patches work on "future" data
-# This makes the evaluation more realistic, since in practice I only have past data to optimize
+# to not test upon the same data as we train on
 def split_by_time(df, val_cutoff_iso):
     train = df[df["final_ts"] < val_cutoff_iso]
     val = df[df["final_ts"] >= val_cutoff_iso]
@@ -59,7 +59,7 @@ def parse_patch_summary(patch_ops):
 def main():
     # CLI args with default values, example category etc.
     ap = argparse.ArgumentParser()
-    ap.add_argument("--category", default="STATUS_SHIPPING")
+    ap.add_argument("--category", default="STATUS_SHIPPING") # change cat to ex. STATUS_DELIVERED for other tests
     ap.add_argument("--val_cutoff", default="2025-07-10")
     ap.add_argument("--max_keywords", type=int, default=3)
     args = ap.parse_args()
